@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<config>
+
+    <modules>
+        <Testsieger_OrderImport>
+            <version>0.1.0</version>
+        </Testsieger_OrderImport>
+    </modules>
+
+    <global>
+        <helpers>
+            <OrderImport>
+                <class>Testsieger_OrderImport_Helper</class>
+            </OrderImport>
+        </helpers>
+
+        <models>
+            <TestsiegerOrderImport>
+                <class>Testsieger_OrderImport_Model</class>
+            </TestsiegerOrderImport>
+        </models>
+    </global>
+
+
+    <frontend>
+        <routers>
+            <OrderImport>
+                <use>standard</use>
+                <args>
+                    <module>Testsieger_OrderImport</module>
+                    <frontName>OrderImport</frontName>
+                </args>
+            </OrderImport>
+        </routers>
+    </frontend>
+
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <OrderImport before="Mage_Adminhtml">Testsieger_OrderImport_Adminhtml</OrderImport>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+
+    <backend_model>TestsiegerOrderImport/Port</backend_model>
+
+</config>

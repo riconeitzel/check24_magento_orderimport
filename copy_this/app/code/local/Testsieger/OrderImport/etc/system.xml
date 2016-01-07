@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+
+    <!-- Config tab -->
+    <tabs>
+        <testsiegerorderimportconf translate="label" module="OrderImport">
+            <label>Testsieger</label>
+            <sort_order>99999</sort_order>
+        </testsiegerorderimportconf>
+    </tabs>
+
+    <!-- Config tab section-->
+    <sections>
+        <OrderImport_options translate="label" module="OrderImport">
+            <label>OrderImport Einstellungen</label>
+            <tab>testsiegerorderimportconf</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <!-- main settings tab-->
+            <groups>
+                <access translate="label">
+                    <label>Zugangsdaten</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>100</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                        <fields>
+                            <orderimport_access_ftpuser>
+                                <label>FTP-Benutzername</label>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>10</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                            </orderimport_access_ftpuser>
+
+                            <orderimport_access_ftppass>
+                                <label>FTP-Passwort</label>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>20</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                            </orderimport_access_ftppass>
+
+                            <orderimport_access_ftphost>
+                                <label>FTP-Host</label>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>30</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                            </orderimport_access_ftphost>
+
+                            <orderimport_access_ftpport>
+                                <label>FTP-Port</label>
+                                <!--backend_model>TestsiegerOrderImport/Port</backend_model-->
+                                <frontend_type>text</frontend_type>
+                                <sort_order>40</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                            </orderimport_access_ftpport>
+
+                            <!--<orderimport_access_ftpcheck translate="button_label">
+                                <label></label>
+                                <button_label>FTP-Verbindung testen</button_label>
+                                <frontend_model>Testsieger/OrderImport/Testsieger_OrderImport_IndexController</frontend_model>
+                                <sort_order>50</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>0</show_in_store>
+                            </orderimport_access_ftpcheck>-->
+                        </fields>
+                </access>
+                <shipping translate="label">
+                    <label>Versand und Zahlart</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>150</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                        <fields>
+
+                            <orderimport_shipping_classmethodid>
+                                <label>Versandart-Code</label>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>10</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                            </orderimport_shipping_classmethodid>
+
+                            <orderimport_payment_classmethodid>
+                                <label>Zahlart-Code</label>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>11</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                            </orderimport_payment_classmethodid>
+
+                            <orderimport_ts_classmethodid>
+                                <label>Testsieger.de Zahlart-Code</label>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>12</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                            </orderimport_ts_classmethodid>
+
+                        </fields>
+                </shipping>
+                <actions translate="label">
+                    <label>Aktionen</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>200</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <comment><![CDATA[<b>Bestellungen <span style="cursor:pointer" onClick=
+                                    " window.location.href =
+                                        $('OrderImport_options_actions_checkforordersnow_link').value
+                                        + '/OrderImport/index/import_orders/key/' + $('OrderImport_options_access_orderimport_access_ftpuser').value
+                                        "><u>jetzt importieren</u></span></b>
+                                        ]]></comment>
+                        <fields>
+                            <checkforordersnow_link>
+                                <label>URL</label>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>10</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                            </checkforordersnow_link>
+                        </fields>
+                </actions>
+            </groups>
+        </OrderImport_options>
+    </sections>
+
+    <!-- Backend Models -->
+    <backend_model>TestsiegerOrderImport/Port</backend_model>
+
+</config>
